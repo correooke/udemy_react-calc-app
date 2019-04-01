@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 
 // Función Flecha o Arrow Function
 const App = () => {
