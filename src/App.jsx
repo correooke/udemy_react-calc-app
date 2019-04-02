@@ -5,7 +5,10 @@ import './App.css'
 const App = () => {
     // Lo que ejecuta la función
     console.log("Renderización de App")
-    return <h1> Calc App </h1>
+    return (
+    <main className='react-calculator'>
+        
+    </main>)
 }
 
 export default App
