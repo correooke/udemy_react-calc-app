@@ -2,10 +2,10 @@ import React from 'react'
 
 const Result = (props) => {
     debugger
-    console.log("Renderización de Result", props)
+    console.log("Renderización de Result", props.value)
     return (
         <div className="result">
-            <span>0</span>
+            {props.value}
         </div>
     )
 }

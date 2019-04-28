@@ -8,7 +8,7 @@ const App = () => {
     console.log("Renderización de App")
     return (
     <main className='react-calculator'>
-        <Result value={0} />
+        <Result value={"0"} />
         <div className="numbers">
             <button>1</button>
             <button>2</button>
