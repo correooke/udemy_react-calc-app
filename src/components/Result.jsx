@@ -14,4 +14,8 @@ Result.propTypes = {
     value: PropTypes.string.isRequired
 }
 
+Result.defaultValues = {
+    value: 0
+}
+
 export default Result
