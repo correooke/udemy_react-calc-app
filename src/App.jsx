@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Functions from './components/Functions'
 import Numbers from './components/Numbers'
 import MathOperations from './components/MathOperations'
@@ -7,13 +7,20 @@ import './App.css'
 
 // Función Flecha o Arrow Function
 const App = () => {
+    // Array Destructuring
+    // 1er posición: valor (que inicialmente es el valor por defecto)
+    // 2da posición: función que me va a permitir modificar el valor por defecto
+    // [xxxx], [setxxxx]
+    const [stack, setStack] = useState("")
+
     // Lo que ejecuta la función
     console.log("Renderización de App")
     return (
     <main className='react-calculator'>
-        <Result value={undefined} />
+        <Result value={stack} />
         <Numbers onClickNumber={number => {
-            console.log("Click en number", number) 
+            console.log("Click en number", number)
+            setStack(number)
         }} />
         <Functions 
             onContentClear={() => 
