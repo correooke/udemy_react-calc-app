@@ -11,7 +11,11 @@ const renderButtons = onClickNumber => {
     // var ArrayComponentes += 
     //<Button text={number.toString()} clickHandler={onClickNumber} />
     const renderButton = number => (
-        <Button text={number.toString()} clickHandler={onClickNumber} />
+        <Button 
+            key={number} 
+            text={number.toString()} 
+            clickHandler={onClickNumber} 
+        />
     )
     return numbers.map(renderButton)
 }
