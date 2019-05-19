@@ -21,7 +21,7 @@ const App = () => {
     
     return (
     <main className='react-calculator'>
-        <Result value={stack} />
+        <Result value={items[items.length-1]} />
         <Numbers onClickNumber={number => {
             console.log("Click en number", number)
             setStack(`${stack}${number}`)
