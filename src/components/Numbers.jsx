@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Button from './Button'
 
 // DRY: Don't repeat yourself
-const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+const numbers = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0]
 
 const renderButtons = onClickNumber => {
     // var number = 0
