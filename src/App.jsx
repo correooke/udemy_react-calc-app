@@ -1,3 +1,4 @@
+/* eslint no-eval: 0 */
 import React, { useState } from 'react'
 import Functions from './components/Functions'
 import Numbers from './components/Numbers'
@@ -23,18 +24,27 @@ const App = () => {
             setStack(`${stack}${number}`)
         }} />
         <Functions 
-            onContentClear={() => 
-                console.log("Content Clear")}
-            onDelete={() => 
-                console.log("onDelete")}
+            onContentClear={() => {
+                console.log("Content Clear")
+                setStack('')
+            }}
+            onDelete={() => {
+                if (stack.length > 0) {
+                    const newStack = stack.substring(0, stack.length - 1)
+                    console.log("onDelete", newStack)
+                    setStack(newStack)
+                }
+            }}
         />
         <MathOperations 
-            onClickOperation={operation => 
+            onClickOperation={operation => {
                 console.log("Operation:", operation)
-            } 
-            onClickEqual={equal => 
+                setStack(`${stack}${operation}`)
+            }} 
+            onClickEqual={equal => {
                 console.log("Equal:", equal)
-            }
+                setStack(eval(stack).toString())
+            }}
         />
     </main>)
 }
