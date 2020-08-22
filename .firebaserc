@@ -1,6 +1,5 @@
 {
   "projects": {
-    "react-calculator": "react-calculator-1e655",
-    "default": "react-calculator-1e655"
+    "default": "calc-app-oke"
   }
 }
